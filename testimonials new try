@@ -27,7 +27,7 @@
     </div>
     </nav>
 
-    <style>
+ <style>
       * {
         box-sizing: border-box;
       }
@@ -53,28 +53,41 @@
       p{
         margin: 5px;
       }
-      .box{
-        background-color: gray;
-      }
       .container {
+        height: 100%;
         display: grid;
-        grid-template-rows: 200px 200px 200px 200px;
-        grid-template-columns: 200px 200px;
-        gap: 1em;
-        grid-template-areas: 
-        "box-1 box-2 box-2 box-3"
-        "box-1 box-4 box-5 box-5";
+        grid-template-columns: repeat(3, 150px);
+        grid-template-rows: repeat(3,150px);
+        grid-gap: 20px 20px;
+      }
+
+      .container div {
+        display: flex;
+       /* justify-content: center;*/
+        align-items: center;
+        background-color: lightblue;
+        color: gray;
+        font-size: 1.5rem;
+        border-radius: 8 px;
+        padding: 20px;
+      }
+
+      #box1 {
+        grid-column-start: 1;
+        grid-column-end: 4;
       }
     </style>
 
-    <div class="container gray">
-        <div class="box" style="grid-area: box 1"></div>
-        <div class="box" style="grid-area: box 2"></div>
-        <div class="box" style="grid-area: box 3"></div>
-        <div class="box" style="grid-area: box 4"></div>
-        <div class="box" style="grid-area: box 5"></div>
+    <div class="container">
+        <div id="box-1"> 1</div>
+        <div id="box-2"> 2</div>
+        <div id="box-3"> 3</div>
+        <div id="box-4"> 4</div>
+        <div id="box-5"> 5</div>
+        <div id="box-6"> 6</div>
     </div>
-
+    <p></p> 
+    
     </body>
 
       <footer> 
